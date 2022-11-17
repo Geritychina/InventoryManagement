@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+@model IEnumerable<InventoryManagement.Models.AppUser>
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcomе!</h1>
+        <img src="~/img/img.png" />
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-4">Only registered users can see Inventory!</h1>
+        <img src="~/img/img2.png" />
+    </div>
+}
